@@ -1,0 +1,52 @@
+/* src/App.css */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('https://images2.alphacoders.com/104/1042582.jpg'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+.welcome-banner {
+  position: absolute;
+  top: 2%;
+  left: 190%;
+  text-align: center;
+  color: #fff;
+  font-size: 36px;
+  font-weight: bolder;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.form-wrapper {
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  padding: 45px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #333;
+}
+
+.subheading {
+  margin-bottom: 30px;
+  font-size: 16px;
+  color: #666;
+}
