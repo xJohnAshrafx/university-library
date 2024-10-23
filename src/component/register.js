@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './Register.css';
-
+//hi 3bnaser
 function Register() {
   const [pass, setPass] = useState(false);
 
