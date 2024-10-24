@@ -1,10 +1,12 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Register.css';
-//hi 3bnaser
+
 function Register() {
   const [pass, setPass] = useState(false);
+  const navigate = useNavigate(); 
 
-    const PassVisibility = () => {
+  const PassVisibility = () => {
     setPass(!pass);
   };
 
@@ -28,6 +30,8 @@ function Register() {
     e.preventDefault();
     setSubmitted(true);
     console.log('Form submitted:', formData);
+
+    navigate('/main');
   };
 
   return (
@@ -84,7 +88,7 @@ function Register() {
           </button>
         </form>
       ) : (
-        <p className="success-message">Thank you for registering, {formData.username}!</p>
+        <p>Registration successful! Redirecting...</p>
       )}
     </div>
   );

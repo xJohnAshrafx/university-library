@@ -1,75 +1,85 @@
 .register-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .register-form {
-    width: 95%;
-  }
-  
-  .form-group {
-    margin-bottom: 20px;
-    text-align: left;
-  }
-  
-  .form-group label {
-    font-size: 14px;
-    color: #333;
-    margin-bottom: 8px;
-    display: block;
-  }
-  
-  .form-group input {
-    width: 100%;
-    padding: 14px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 14px;
-    color: #333;
-    transition: border-color 0.3s ease;
-  }
-  
-  .form-group input:focus {
-    border-color: #007bff;
-    outline: none;
-  }
-  
-  .register-btn {
-    width: 80%;
-    padding: 12px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .register-btn:hover {
-    background-color: #0056b3;
-  }
-  
-  .success-message {
-    font-size: 18px;
-    color: #28a745;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px; /* Space from the top */
+  width: 100%; /* Full width of the container */
+  margin-left: 200px; /* Move the container to the right */
+}
+
+.register-form {
+  width: 100%; /* Full width for the form */
+  max-width: 500px; /* Larger form size (increased from 400px to 500px) */
+  padding: 40px; /* Increased padding for a bigger form */
+  background-color: #fff; /* White background for the form */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for contrast */
+}
+
+.form-group {
+  margin-bottom: 20px;
+  width: 100%; /* Ensures each input takes up the full width of the form */
+}
+
+.form-group label {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.form-group input {
+  width: 100%; /* Full width for inputs */
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  background-color: #f9f9f9; /* Light input background */
+}
+
+.form-group input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.register-btn {
+  width: 100%; /* Full-width button */
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.register-btn:hover {
+  background-color: #0056b3;
+}
+
+.success-message {
+  font-size: 18px;
+  color: #28a745;
+  text-align: center;
+  margin-top: 20px;
+}
 
 input[type="checkbox"] {
   width: 18px;
   height: 18px;
-  cursor: pointer;
-  accent-color: #007bff; 
+  margin-right: 10px;
 }
 
 .form-group label {
-  font-size: 16px;
-  cursor: pointer;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
-.form-group label input {
-  margin-right: 10px;
+/* Responsive design */
+@media (max-width: 768px) {
+  .register-form {
+    width: 90%; /* Makes the form fit smaller screens */
+  }
 }
