@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  .library-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+    width: 100vw;  /* Full viewport width */
+  }
+  
+  .appbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #003366;
+    color: #fff;
+    width: 100%; /* Ensure full width */
+  }
+  
+  .appbar h1 {
+    font-size: 1.8rem;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .nav-links button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .nav-links button:hover {
+    color: #ffcc00;
+  }
+  
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #f5f5f5;
+    flex: 1; /* Allow it to grow */
+    width: 100%; /* Ensure full width */
+  }
+  
+  .section-container {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensure full width */
+  }
+  
+  .section-container h2 {
+    font-size: 1.5rem;
+    color: #003366;
+    margin-bottom: 10px;
+  }
+  
+  .section-container p {
+    color: #666;
+    font-size: 1rem;
+  }
+  
+  /* Footer Styles */
+  .footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #003366;
+    color: #fff;
+    width: 100%; /* Ensure full width */
+  }
+  
