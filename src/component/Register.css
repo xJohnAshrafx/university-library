@@ -1,25 +1,54 @@
-.register-container {
+.page-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 50px; /* Space from the top */
-  width: 100%; /* Full width of the container */
-  margin-left: 200px; /* Move the container to the right */
+  width: 100%;
+  padding: 20px;
+}
+
+.register-container {
+  flex: 2; /* Makes this container fill the left half */
+  max-width: 600px;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-message {
+  flex: 1; /* Makes this container fill the right half */
+  display: flex;
+  justify-content: flex-end; /* Aligns the text to the right */
+  align-items: center; /* Centers vertically if needed */
+  color: white;
+  text-align: right;
+}
+
+.welcome-message h1 {
+  font-size: 100px;
+  color: white;
+  margin-bottom: 50px;
+  margin-right: 100px;
+}
+
+@media (max-width: 768px) {
+  .register-container,
+  .welcome-message {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+
+  .welcome-message h1 {
+    font-size: 24px;
+  }
 }
 
 .register-form {
-  width: 100%; /* Full width for the form */
-  max-width: 500px; /* Larger form size (increased from 400px to 500px) */
-  padding: 40px; /* Increased padding for a bigger form */
-  background-color: #fff; /* White background for the form */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for contrast */
+  width: 100%;
 }
 
 .form-group {
   margin-bottom: 20px;
-  width: 100%; /* Ensures each input takes up the full width of the form */
+  width: 100%;
 }
 
 .form-group label {
@@ -30,12 +59,12 @@
 }
 
 .form-group input {
-  width: 100%; /* Full width for inputs */
+  width: 100%;
   padding: 12px;
   border-radius: 5px;
   border: 1px solid #ccc;
   font-size: 14px;
-  background-color: #f9f9f9; /* Light input background */
+  background-color: #f9f9f9;
   color: #333;
 }
 
@@ -45,7 +74,7 @@
 }
 
 .register-btn {
-  width: 100%; /* Full-width button */
+  width: 100%;
   padding: 12px;
   background-color: #007bff;
   color: white;
@@ -57,13 +86,6 @@
 
 .register-btn:hover {
   background-color: #0056b3;
-}
-
-.success-message {
-  font-size: 18px;
-  color: #28a745;
-  text-align: center;
-  margin-top: 20px;
 }
 
 input[type="checkbox"] {
@@ -78,9 +100,16 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
-  .register-form {
-    width: 90%; /* Makes the form fit smaller screens */
+  .register-container,
+  .welcome-message {
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .welcome-message h1 {
+    font-size: 24px;
   }
 }

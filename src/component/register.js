@@ -35,61 +35,66 @@ function Register() {
   };
 
   return (
-    <div className="register-container">
-      {!submitted ? (
-        <form onSubmit={handleSubmit} className="register-form">
-          <div className="form-group">
-            <label htmlFor="username">Username</label>
-            <input
-              type="text"
-              id="username"
-              name="username"
-              value={formData.username}
-              onChange={handleChange}
-              placeholder="Enter your username"
-              required
-            />
-          </div>
+    <div className="page-container">
+      <div className="register-container">
+        {!submitted ? (
+          <form onSubmit={handleSubmit} className="register-form">
+            <div className="form-group">
+              <label htmlFor="username">Username</label>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                value={formData.username}
+                onChange={handleChange}
+                placeholder="Enter your username"
+                required
+              />
+            </div>
 
-          <div className="form-group">
-            <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="Enter your email"
-              required
-            />
-          </div>
+            <div className="form-group">
+              <label htmlFor="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Enter your email"
+                required
+              />
+            </div>
 
-          <div className="form-group">
-            <label htmlFor="password">Password</label>
-            <input
-              type={pass ? 'text' : 'password'}
-              id="password"
-              name="password"
-              value={formData.password}
-              onChange={handleChange}
-              placeholder="Enter your password"
-              required
-            />
-          </div>
+            <div className="form-group">
+              <label htmlFor="password">Password</label>
+              <input
+                type={pass ? 'text' : 'password'}
+                id="password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                placeholder="Enter your password"
+                required
+              />
+            </div>
 
-          <div className="form-group">
-            <label>
-              <input type="checkbox" onChange={PassVisibility} /> Show Password
-            </label>
-          </div>
+            <div className="form-group">
+              <label>
+                <input type="checkbox" onChange={PassVisibility} /> Show Password
+              </label>
+            </div>
 
-          <button type="submit" className="register-btn">
-            Register
-          </button>
-        </form>
-      ) : (
-        <p>Registration successful! Redirecting...</p>
-      )}
+            <button type="submit" className="register-btn">
+              Register
+            </button>
+          </form>
+        ) : (
+          <p>Registration successful! Redirecting...</p>
+        )}
+      </div>
+      <div className="welcome-message">
+        <h1>Welcome to University’s Library</h1>
+      </div>
     </div>
   );
 }

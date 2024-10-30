@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './main.css';
 
-function main() {
+function Main() {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
   return (
     <div className="library-container">
       {/* AppBar */}
@@ -15,29 +21,17 @@ function main() {
         </nav>
       </header>
 
-      {/* Main Content */}
       <main className="main-content">
-
-      <section className="section-container new-arrivals">
-          <h2>i love you john</h2>
-          <p>ايه رايك في دي يبا </p>
-        </section>
-
-
-        <section className="section-container new-arrivals">
-          <h2>New Arrivals</h2>
-          <p>Explore the latest additions to our library collection, updated weekly.</p>
-        </section>
-
-        <section className="section-container popular-books">
-          <h2>Popular Books</h2>
-          <p>Check out the most popular books among students and faculty.</p>
-        </section>
-
-        <section className="section-container research-papers">
-          <h2>Research Papers</h2>
-          <p>Access a vast collection of research papers across various fields of study.</p>
-        </section>
+        <div className="dropdown">
+          <button className="dropbtn" onClick={toggleDropdown}>Dropdown</button>
+          {isDropdownOpen && (
+            <div className="dropdown-content">
+              <a href="#">CS</a>
+              <a href="#">Alsun</a>
+              <a href="#">Tourism and hotels</a>
+            </div>
+          )}
+        </div> 
       </main>
 
       {/* Footer */}
@@ -48,4 +42,4 @@ function main() {
   );
 }
 
-export default main;
+export default Main;
