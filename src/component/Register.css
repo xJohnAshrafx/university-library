@@ -1,16 +1,35 @@
+/* Reset margin and padding for the body and html to fill the screen */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Ensures the body takes up full height */
+  width: 100%; /* Ensures the body takes up full width */
+  font-family: 'Arial', sans-serif; /* Set a clean font */
+}
+
 .page-container {
   display: flex;
-  width: 100%;
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
   padding: 20px;
+  background-image: url('F:\College\level 4\library project\university-library\library background.jpg'); /* Replace with your image path */
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
 .register-container {
-  flex: 2; /* Makes this container fill the left half */
+  flex: 3; /* Makes this container fill the left half */
   max-width: 600px;
+  max-height: 420px;
   padding: 40px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 110px;
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white for better visibility */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow for more depth */
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
 }
 
 .welcome-message {
@@ -29,21 +48,10 @@
   margin-right: 100px;
 }
 
-@media (max-width: 768px) {
-  .register-container,
-  .welcome-message {
-    width: 100%;
-    text-align: center;
-    margin: 0;
-  }
-
-  .welcome-message h1 {
-    font-size: 24px;
-  }
-}
-
 .register-form {
   width: 100%;
+  display: flex;
+  flex-direction: column; /* Stack inputs vertically */
 }
 
 .form-group {
@@ -52,7 +60,7 @@
 }
 
 .form-group label {
-  font-size: 14px;
+  font-size: 16px; /* Larger label for better visibility */
   color: #333;
   margin-bottom: 8px;
   display: block;
@@ -61,31 +69,34 @@
 .form-group input {
   width: 100%;
   padding: 12px;
-  border-radius: 5px;
+  border-radius: 8px; /* More rounded corners */
   border: 1px solid #ccc;
-  font-size: 14px;
-  background-color: #f9f9f9;
+  font-size: 16px; /* Slightly larger font size */
+  background-color: #f9f9f9; /* Light background for input fields */
   color: #333;
+  transition: border-color 0.3s ease; /* Smooth transition for focus state */
 }
 
 .form-group input:focus {
-  border-color: #007bff;
-  outline: none;
+  border-color: #007bff; /* Highlight border on focus */
+  outline: none; /* Remove default outline */
+  background-color: #fff; /* Slightly darker on focus */
 }
 
 .register-btn {
   width: 100%;
   padding: 12px;
-  background-color: #007bff;
+  background-color: #007bff; /* Primary color */
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px; /* Rounded corners for button */
   font-size: 16px;
   cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for hover */
 }
 
 .register-btn:hover {
-  background-color: #0056b3;
+  background-color: #0056b3; /* Darker shade on hover */
 }
 
 input[type="checkbox"] {

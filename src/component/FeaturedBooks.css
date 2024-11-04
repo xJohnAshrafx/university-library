@@ -1,0 +1,53 @@
+/* FeaturedBooks.css */
+
+.featured-books {
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.featured-books h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.book-cards {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.book-card {
+  width: 150px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+}
+
+.book-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.book-card h3 {
+  font-size: 16px;
+  margin: 5px 0;
+  color: #004d99;
+}
+
+.book-card p {
+  font-size: 14px;
+  color: #666;
+}

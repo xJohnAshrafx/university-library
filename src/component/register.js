@@ -31,7 +31,7 @@ function Register() {
     setSubmitted(true);
     console.log('Form submitted:', formData);
 
-    navigate('/main');
+    navigate('/HomePage');
   };
 
   return (
@@ -39,7 +39,7 @@ function Register() {
       <div className="register-container">
         {!submitted ? (
           <form onSubmit={handleSubmit} className="register-form">
-            <div className="form-group">
+            {/* <div className="form-group">
               <label htmlFor="username">Username</label>
               <input
                 type="text"
@@ -50,7 +50,7 @@ function Register() {
                 placeholder="Enter your username"
                 required
               />
-            </div>
+            </div> */}
 
             <div className="form-group">
               <label htmlFor="email">Email</label>
